@@ -15,9 +15,6 @@ import java.util.ArrayList;
 
 public class MonRecyclerViewAdapter extends RecyclerView.Adapter<MonRecyclerViewAdapter.ConteneurDeDonnee> {
     private ArrayList<Planete> planetes;
-    private static DetecteurDeClicSurRecycler detecteurDeClicSurRecycler;
-
-
 
     public MonRecyclerViewAdapter(ArrayList<Planete> planetes) {
         this.planetes = planetes;
@@ -71,7 +68,7 @@ public class MonRecyclerViewAdapter extends RecyclerView.Adapter<MonRecyclerView
         return planetes.size();
     }
 
-    public  static class ConteneurDeDonnee extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public  static class ConteneurDeDonnee extends RecyclerView.ViewHolder {
         TextView tv_principal;
         TextView tv_auxiliaire;
         ImageView imageView;
@@ -81,13 +78,7 @@ public class MonRecyclerViewAdapter extends RecyclerView.Adapter<MonRecyclerView
             tv_principal = (TextView) itemView.findViewById(R.id.tv_principal);
             tv_auxiliaire = (TextView) itemView.findViewById(R.id.tv_auxiliaire);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
-            itemView.setOnClickListener((View.OnClickListener) this);
-        }
 
-        @Override
-        public void onClick(View v) {
-            ((CardView)v).setCardBackgroundColor(Color.rgb(255,0,0));
-            detecteurDeClicSurRecycler.clicSurRecyclerItem(getAdapterPosition(), v);
         }
     }
 
