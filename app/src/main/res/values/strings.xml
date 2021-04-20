@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BDD</string>
+    <string name="submit" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_planete">Ajouter une planète :</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="nom">Nom</string>
+    <string name="taille">Taille</string>
+    <string name="image_planete">image planete</string>
+</resources>
